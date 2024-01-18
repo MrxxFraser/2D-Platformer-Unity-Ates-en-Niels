@@ -6,23 +6,27 @@ using UnityEngine;
 public class movement1 : MonoBehaviour
 {
 
-    float kaas = 0.3f;
+    public float kaas = 0.3f;
+    public bool cheese = true;
     void Start()
     {
         
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-       
 
-        if (Input.GetKeyDown(KeyCode.D))
+        for (cheese = true; cheese;)
         {
-                transform.Translate(kaas, 0 ,0);
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                transform.Translate(kaas, 0, 0);
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            Rigidbody2D.
-        }
+        
     }
 }
