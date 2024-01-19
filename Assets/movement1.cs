@@ -6,27 +6,22 @@ using UnityEngine;
 public class movement1 : MonoBehaviour
 {
 
-    public float kaas = 0.3f;
+    public float kaas = 0.02f;
     public bool cheese = true;
     void Start()
     {
         
     }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-
-        for (cheese = true; cheese;)
-        {
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.UpArrow))
             {
-                transform.Translate(kaas, 0, 0);
+                transform.Translate(-kaas, 0, 0 * Time.deltaTime);
             }
-            else if (Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKey(KeyCode.A))
             {
 
             }
-        }
-        
     }
 }
